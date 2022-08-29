@@ -1,16 +1,40 @@
-# This is a sample Python script.
+def ajouterMot(mot, type):
+    list.append([mot, type])
+    return list
 
-# Press Maj+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def menuAjouterMot(list):
+    print("Menu pour l'ajout d'un mot, que souhaitez vous faire ?")
+    print("1 : Ajouter un mot ")
+    print("2 : Retourner au menu principale")
+    confirm = input()
+    match confirm:
+        case "1":
+            mot = input("Quel mot ? ")
+            type = input("Classe de mot ( Nom, Adjectif, Verbe, Adverbe, Déterminant, Pronom, Preposiotion, Conjonction, Interjection  ) ? : ")
+            type = input()
+
+            print("Votre mot est : ", mot)
+            print("c'est un ", type)
+            print("Confirmez vous la saisie ? oui / non")
+            choix = input()
+            if choix == "oui":
+                list = ajouterMot(mot, type, list)
+                return menuAjouterMot(list)
+            else:
+                print("Retour au menu d'ajout de mot")
+                return menuAjouterMot(list)
+        case "2":
+            print("Retour au menu principale...")
+            return menuAjouterMot(list)
+        case _:
+            print("Erreur de saisie...")
+            return menuAjouterMot(list)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    list = ["oui", "non"]
+    menuAjouterMot(list)
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
