@@ -1,6 +1,6 @@
 
 def supprimer(dico):
-    print("Quel élément du dictionnaire souhaitez vous supprimer: ")
+    print("Quel élément du dictionnaire souhaitez vous supprimer ")
 
 def afficher(dico):
     print(dico)
@@ -37,6 +37,8 @@ def menu():
             case "5":
                 afficher(dico)
             case "Q":
+                return
+            case "p":
                 return
             case _:
                 print("erreur, entrez une valeur entre 1 et 5, ou entrez Q pour quitter")
