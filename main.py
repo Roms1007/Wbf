@@ -46,26 +46,6 @@ def remplacermenu():
                 print("Erreur : commande incorrecte")
         choix = input()
 
-print("lol")
-
-        match choix:
-            case "1":
-                print("hello")
-            case "2":
-                supprimer(dico)
-            case "3":
-                print("hello")
-            case "4":
-                print("hello")
-            case "5":
-                afficher(dico)
-            case "Q":
-                return
-            case "p":
-                return
-            case _:
-                print("erreur, entrez une valeur entre 1 et 5, ou entrez Q pour quitter")
-                return menu()
 
 def main():
     menu()
