@@ -45,36 +45,40 @@ def menu():
     flag = True
     while flag == True:
         print("Bienvenue dans le dictionnaire, que souhaitez vous faire : ")
-        case
-        "1":
-        mot = input("Quel mot ? ")
-        type = input(
-            "Classe de mot ( Nom, Adjectif, Verbe, Adverbe, Déterminant, Pronom, Preposiotion, Conjonction, Interjection  ) ? : ")
-        type = input()
-            print("Votre mot est : ", mot)
-            print("c'est un ", type)
-            print("Confirmez vous la saisie ? oui / non")
-            choix = input()
-            if choix == "oui":
-                list = ajouterMot(mot, type, list)
-                return menuAjouterMot(list)
-            else:
-                print("Retour au menu d'ajout de mot")
-                return menuAjouterMot(list)
+    case"1":
+    mot = input("Quel mot ? ")
+    type = input("Classe de mot ( Nom, Adjectif, Verbe, Adverbe, Déterminant, Pronom, Preposiotion, Conjonction,"
+                 " Interjection  ) ? : ")
+    type = input()
+    print("Votre mot est : ", mot)
+    print("c'est un ", type)
+    print("Confirmez vous la saisie ? oui / non")
+    choix = input()
+    if choix == "oui":
+        list = ajouterMot(mot, type, list)
+        return menuAjouterMot(list)
+        else:
+        print("Retour au menu d'ajout de mot")
+        return menuAjouterMot(list)
         case "2":
-            print("Retour au menu principale...")
-            return menuAjouterMot(list)
+        print("Retour au menu principale...")
+        return menuAjouterMot(list)
         case :
-            print("Erreur de saisie...")
-            return menuAjouterMot(list)
+        print("Erreur de saisie...")
+        return menuAjouterMot(list)
         print("1 : Ajouter un élément dans le dictionnaire")
         print("2 : Supprimer un élément du dictionnaire")
         print("3 : Modifier un élément du dictionnaire")
         print("4 : Remplacer un élément du dictionaire")
         print("5 : Afficher dictionnaire")
         print("Q : Quitter")
+
+
 def remplacer(key, input, key1, input1):
-    liste.pop(key[input])
+    list.pop(key[input])
+
+
+
 
 def remplacermenu():
     flag = True
