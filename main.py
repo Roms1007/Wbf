@@ -52,9 +52,8 @@ def remplacermenu(list):
                 animal = input()
 
                 for i in range(len(list)):
-
                     if i == animal:
-                        remplacer(animal, choix)
+                        remplacer(animal, choix,i)
                     else:
                         return list
             case "2":
@@ -74,14 +73,14 @@ def menu():
         }
 
     flag = True
-    while flag == True:
+    while flag:
         print("Bienvenue dans le dictionnaire, que souhaitez vous faire : ")
         print("1 : Ajouter un élément dans le dictionnaire")
         print("2 : Supprimer un élément du dictionnaire")
         print("3 : Modifier un élément du dictionnaire")
         print("4 : Remplacer un élément du dictionaire")
         print("5 : Afficher dictionnaire")
-        print("Q : Quitter")
+        print("6 : Quitter")
 
         choix= input()
         match choix:
@@ -89,29 +88,18 @@ def menu():
                     remplacermenu(list)
                 case "2":
                     return menuAjouterMot(list)
+                case "3":
+                    print("hello")
+                case "4":
+                    print("hello")
+                case "5":
+                    print("hello")
+                case "6" :
+                    flag = False
+                    print("Au revoir")
                 case _:
                     print("Erreur de saisie...")
-                    flag == False
 
-    print("Bienvenue dans le dictionnaire, que souhaitez vous faire : ")
-    print("1 : Ajouter un élément dans le dictionnaire")
-    print("2 : Supprimer un élément du dictionnaire")
-    print("3 : Modifier un élément du dictionnaire")
-    print("4 : Remplacer un élément du dictionaire")
-    print("5 : Afficher dictionnaire")
-    print("Q : Quitter")
-    flag = True
-    while flag == True:
-        choix= input()
-        match choix:
-            case"1":
-                remplacermenu(list)
-            case "2":
-                print("Retour au menu principale...")
-                return menuAjouterMot(list)
-            case _:
-                print("Erreur de saisie...")
-                flag == False
 
 def main():
     menu()
