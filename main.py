@@ -50,7 +50,7 @@ def remplacermenu(list):
             case "1":
                 print("Quel animal voulez-vous remplacer ?")
                 animal = input()
-                for i in range (len(list)):
+                for i in range(len(list)):
                     if i == animal:
                         remplacer(animal, choix)
                     else:
