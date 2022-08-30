@@ -1,6 +1,6 @@
 # This is a sample Python script.
 #salut c est medhi ^^
-mjr
+
 
 def menuAjouterMot(list):
     print("Menu pour l'ajout d'un mot, que souhaitez vous faire ?")
