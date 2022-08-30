@@ -2,6 +2,10 @@
 #salut c est medhi ^^
 
 
+def ajouterMot(mot, type):
+    list.append([mot, type])
+    return list
+
 def menuAjouterMot(list):
     print("Menu pour l'ajout d'un mot, que souhaitez vous faire ?")
     print("1 : Ajouter un mot ")
@@ -12,18 +16,6 @@ def menuAjouterMot(list):
             mot = input("Quel mot ? ")
             type = input("Classe de mot ( Nom, Adjectif, Verbe, Adverbe, Déterminant, Pronom, Preposiotion, Conjonction, Interjection  ) ? : ")
             type = input()
-liste = {"animaux": ["lion", "dauphin", "chameau", "léopard"],
-         "humain": ["Stephane", "Romain", "Kevin", "Alexis", "Toto"], "objet": ["PC", "Stylo", "cahier"]}
-
-def menu():
-    dico = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1966,
-}
-    flag = True
-    while flag == True:
-        print("Bienvenue dans le dictionnaire, que souhaitez vous faire : ")
 
             print("Votre mot est : ", mot)
             print("c'est un ", type)
@@ -39,6 +31,40 @@ def menu():
             print("Retour au menu principale...")
             return menuAjouterMot(list)
         case _:
+            print("Erreur de saisie...")
+            return menuAjouterMot(list)
+
+
+
+def menu():
+    dico = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1966,
+}
+    flag = True
+    while flag == True:
+        print("Bienvenue dans le dictionnaire, que souhaitez vous faire : ")
+        case
+        "1":
+        mot = input("Quel mot ? ")
+        type = input(
+            "Classe de mot ( Nom, Adjectif, Verbe, Adverbe, Déterminant, Pronom, Preposiotion, Conjonction, Interjection  ) ? : ")
+        type = input()
+            print("Votre mot est : ", mot)
+            print("c'est un ", type)
+            print("Confirmez vous la saisie ? oui / non")
+            choix = input()
+            if choix == "oui":
+                list = ajouterMot(mot, type, list)
+                return menuAjouterMot(list)
+            else:
+                print("Retour au menu d'ajout de mot")
+                return menuAjouterMot(list)
+        case "2":
+            print("Retour au menu principale...")
+            return menuAjouterMot(list)
+        case :
             print("Erreur de saisie...")
             return menuAjouterMot(list)
         print("1 : Ajouter un élément dans le dictionnaire")
