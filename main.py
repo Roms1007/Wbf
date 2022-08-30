@@ -88,8 +88,8 @@ def menu():
                 print("Retour au menu principale...")
                 return menuAjouterMot(list)
             case _:
-             print("Erreur de saisie...")
-    flag == False
+                print("Erreur de saisie...")
+                flag == False
 
 def main():
     menu()
