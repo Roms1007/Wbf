@@ -50,7 +50,9 @@ def remplacermenu(list):
             case "1":
                 print("Quel animal voulez-vous remplacer ?")
                 animal = input()
-                for i in range (len(list)):
+
+                for i in range(len(list)):
+
                     if i == animal:
                         remplacer(animal, choix)
                     else:
@@ -70,6 +72,7 @@ def menu():
         "model": "Mustang",
         "year": 1966,
         }
+
     flag = True
     while flag == True:
         print("Bienvenue dans le dictionnaire, que souhaitez vous faire : ")
@@ -89,6 +92,26 @@ def menu():
                 case _:
                     print("Erreur de saisie...")
                     flag == False
+
+    print("Bienvenue dans le dictionnaire, que souhaitez vous faire : ")
+    print("1 : Ajouter un élément dans le dictionnaire")
+    print("2 : Supprimer un élément du dictionnaire")
+    print("3 : Modifier un élément du dictionnaire")
+    print("4 : Remplacer un élément du dictionaire")
+    print("5 : Afficher dictionnaire")
+    print("Q : Quitter")
+    flag = True
+    while flag == True:
+        choix= input()
+        match choix:
+            case"1":
+                remplacermenu(list)
+            case "2":
+                print("Retour au menu principale...")
+                return menuAjouterMot(list)
+            case _:
+                print("Erreur de saisie...")
+                flag == False
 
 def main():
     menu()
